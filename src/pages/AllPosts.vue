@@ -1,12 +1,15 @@
 <template>
     <div>
-        <h1>AllPosts</h1>
-        <div class="post" v-for="todo in todos" v-bind:key="todo._id">
-            <!-- this functions as an <a> tag -->
-            <router-link>
-                <h1>{{ todo.subject }}</h1>
-            </router-link>
-        </div>
+        <h1>My Todo List</h1>
+        <ul>
+            <li class="post" v-for="todo of todos" :key="todo.id">
+                <!-- this functions as an <a> tag -->
+                    <!-- :to attrib is not working -->
+                <router-link :to="{ name: 'post', params: { id: todo.id } }">
+                    <h1>{{ todo.subject }}</h1>
+                </router-link>
+            </li>
+        </ul>
     </div>
 </template>
 

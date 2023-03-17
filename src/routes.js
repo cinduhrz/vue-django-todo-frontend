@@ -10,7 +10,8 @@ import Form from "./pages/Form.vue"
 /////////////////////////
 export default [
     { path: "/", component: AllPosts, props: true},
-    { path: "/post/:id", component: SinglePost, name: "post"},
+    // ORDER MATTERS -- name attrib must go BEFORE component attrib
+    { path: "/post/:id", name: "post", component: SinglePost},
     { path: "/new", component: Form},
     { path: "/edit", component: Form }
 ];
