@@ -13,5 +13,5 @@ export default [
     // ORDER MATTERS -- name attrib must go BEFORE component attrib
     { path: "/post/:id", name: "post", component: SinglePost},
     { path: "/new", component: Form},
-    { path: "/edit", component: Form }
+    { path: "/edit/:id", name:"edit", component: Form }
 ];
