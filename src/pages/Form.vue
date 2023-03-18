@@ -50,12 +50,13 @@ import { ref, toRefs } from "vue" // get vue hooks
                     })
 
                     // run get todos function to update the allposts screen
-                    getTodos.value()
+                    await getTodos.value()
                     // redirect to todo
                     // actually don't bc it's not updated yet... for some reason, even tho we ran getTodos.value()
                     // so just redirect to root
-                    // router.push({ name: 'post', params: { id: todo.id } })
-                    router.push("/")
+                    // WAIT IT WORKS IF WE PUT "await" :O noice
+                    router.push({ name: 'post', params: { id: todo.id } })
+                    // router.push("/")
                 }
             } else {
                 console.log("EDIT ROUTE MISSED, CREATE ROUTE REACHED")
