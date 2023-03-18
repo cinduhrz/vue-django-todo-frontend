@@ -35,7 +35,7 @@ import { ref, toRefs } from "vue" // get vue hooks
                 console.log(todo.subject, subject.value)
                 details.value = todo.details
                 // set label for submit button
-                buttonLabel = "edit todo"
+                buttonLabel = "update todo"
                 // define function to update
                 handleSubmit = async () => {
                     await fetch(url.value + route.params.id + "/", {
@@ -51,7 +51,10 @@ import { ref, toRefs } from "vue" // get vue hooks
 
                     // run get todos function to update the allposts screen
                     getTodos.value()
-                    // redirect to root
+                    // redirect to todo
+                    // actually don't bc it's not updated yet... for some reason, even tho we ran getTodos.value()
+                    // so just redirect to root
+                    // router.push({ name: 'post', params: { id: todo.id } })
                     router.push("/")
                 }
             } else {
