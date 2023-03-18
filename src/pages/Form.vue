@@ -1,4 +1,5 @@
 <template>
+    <router-link to="/"><button>Back to Main</button></router-link>
     <h1>Edit/Create a Todo</h1>
     <form v-on:submit.prevent="handleSubmit">
         <input type="text" placeholder="subject" v-model="subject"/>
