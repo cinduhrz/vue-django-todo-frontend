@@ -10,7 +10,7 @@
 
 <script setup>
 import { useRoute, useRouter } from 'vue-router' // get useRoute hook to get access to route params
-import { toRefs } from 'vue' // get toRegs hook to maintain props reactivity
+import { toRefs } from 'vue' // get toRefs hook to maintain props reactivity
 
 // define props and their type
 const props = defineProps({
